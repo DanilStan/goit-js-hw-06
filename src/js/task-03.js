@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const emptyList = images.map((parametr) => {
+  return `<li><img src=${parametr.url} alt='${parametr.alt}'></li>`;
+});
+
+// console.log(...emptyList);
+
+const primaryList = document.querySelector('.gallery');
+
+primaryList.insertAdjacentHTML('beforeend', ...emptyList);
+
+// console.log(emptyList);
