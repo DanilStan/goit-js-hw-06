@@ -1,43 +1,18 @@
-const refs = {
-    inputEl: document.querySelector("#validation-input"),
-}
+const onInputId = document.querySelector('#validation-input');
+const onInputIdAttrebuteValue = Number(onInputId.dataset.length);
 
-const validLength = Number(refs.inputEl.dataset.length);
-refs.inputEl.addEventListener("blur", onInputValid);
+onInputId.addEventListener('blur', onInputBlur);
 
-function onInputValid(event) {
-    if (event.target.value.length === validLength) {
-        updateClassElem("valid", "invalid");
+function onInputBlur(event) {
+    // console.dir(event.currentTarget);
+    if (event.target.value.length === onInputIdAttrebuteValue) {
+        updateClassEl('valid', 'invalid');
     } else {
-        updateClassElem("invalid", "valid");
+        updateClassEl('invalid', 'valid');
     }
 }
 
-function updateClassElem(addCl, remCl) {
-    refs.inputEl.classList.remove(remCl);
-    refs.inputEl.classList.add(addCl);
+function updateClassEl(addClass, remClass) {
+    onInputId.classList.add(addClass)
+    onInputId.classList.remove(remClass)
 }
-
-
-
-
-
-
-// const onInputId = document.querySelector('#validation-input');
-// const onInputIdAttrebuteValue = Number(onInputId.dataset.length);
-
-// onInputId.addEventListener('blur', onInputBlur);
-
-// function onInputBlur(event) {
-//     // console.dir(event.currentTarget);
-//     if (event.target.value.length === onInputIdAttrebuteValue) {
-//         updateClassEl('valid', 'invalid');
-//     } else {
-//         updateClassEl('invalid', 'valid');
-//     }
-// }
-
-// function updateClassEl(addClass, remClass) {
-//     onInputId.classList.add(addClass)
-//     onInputId.classList.remove(remClass)
-// }
