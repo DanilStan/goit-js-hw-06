@@ -5,7 +5,7 @@ onInputId.addEventListener('blur', onInputBlur);
 
 function onInputBlur(event) {
     // console.dir(event.currentTarget);
-    if (event.currentTarget.value.length >= onInputIdAttrebuteValue) {
+    if (event.currentTarget.value.length === onInputIdAttrebuteValue) {
         updateClassEl('valid', 'invalid');
     } else {
         updateClassEl('invalid', 'valid')
