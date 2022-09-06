@@ -12,15 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
 const emptyList = images.map((parametr) => {
-  return `<li><img src=${parametr.url} alt='${parametr.alt}'></li>`;
+  return `<li><img src=${parametr.url} alt='${parametr.alt}' width="300" height="200"></li>`;
 });
-
-// console.log(...emptyList);
 
 const primaryList = document.querySelector('.gallery');
 
-primaryList.insertAdjacentHTML('beforeend', ...emptyList);
+primaryList.insertAdjacentHTML('beforeend', emptyList.join(''));
 
-// console.log(emptyList);
