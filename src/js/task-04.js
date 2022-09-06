@@ -1,5 +1,3 @@
-
-
 const counterValue = {
     value: 0,
     incriment () {
@@ -13,7 +11,6 @@ const counterValue = {
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
 const incrementBtn = document.querySelector('button[data-action="increment"]');
 const valueEl = document.querySelector('#value');
-
 
 // console.log(decrementBtn);
 // console.log(incrementBtn);
